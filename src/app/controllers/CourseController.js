@@ -10,7 +10,7 @@ class CourseController{
         Course.findOne({slug: req.params.slug})
             .then(course => {
                  res.render('courses/courseDetail', {course: mongooseElementToObj(course)})
-                
+                console.log(123)
             })
             .catch(next)
 
