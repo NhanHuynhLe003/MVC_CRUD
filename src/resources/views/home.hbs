@@ -1,3 +1,14 @@
-<div style="height:70vh; color:#333;">
-    This is Home page
+<div>
+    <div id="courseContainer" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+        {{#each courses}}
+        <div class="card" style="width: 45%; margin: 2rem;">
+            <img class="card-img-top" src="{{this.image}}" alt="Card image cap" style="width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">{{this.title}}</h5>
+                <p class="card-text">{{this.description}}</p>
+                <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
