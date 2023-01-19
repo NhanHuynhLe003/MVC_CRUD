@@ -1,0 +1,56 @@
+<div class="courseContainer">
+    <div class="row mt-5 mb-5">
+        <div class="col-lg-5" style="position: relative;">
+            <div class="thumbnail-container">
+                <img width="100%" style="border-radius: 1rem;"
+                    src="{{course.image}}" alt="thumbnail">
+            </div>
+            <button style="position: absolute; display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 50%;
+    color: #333;
+    background: rgb(220, 206, 12);
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+    top: 50%;
+    left: 50%;
+
+    "><i class="fa-solid fa-play"></i></button>
+        </div>
+        <div class="col-lg-7">
+            <div class="content-container">
+                <h1 class="title">{{course.title}}</h1>
+                <p class="description">{{course.description}}</p>
+            </div>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                xem ngay
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">{{course.title}}</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="display: flex; flex-direction: column; align-items: center;">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{course.videoid}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">X</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

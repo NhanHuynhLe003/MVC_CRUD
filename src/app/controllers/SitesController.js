@@ -1,6 +1,6 @@
 
 
-const Course = require('../models/course');
+const Course = require('../models/home');
 const {mongooseListToObj} = require('../../mongooseTool/mongoose');
 class SitesController{
 
@@ -18,4 +18,4 @@ class SitesController{
     }
 }
 
-module.exports = new SitesController; 
+module.exports = new SitesController(); 
